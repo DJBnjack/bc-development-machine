@@ -50,3 +50,7 @@ Tunnel from 5901 (standard tightvncserver port) to localhost:5901
 From tightvnc.com [http://www.tightvnc.com/]
 
 Connect to ```localhost:5901```
+
+# Make everything look better
+Gnome shell [https://www.maketecheasier.com/8-gnome-shell-themes/]
+Terminal [https://github.com/denysdovhan/one-gnome-terminal]
