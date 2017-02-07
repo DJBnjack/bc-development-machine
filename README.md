@@ -41,16 +41,30 @@ metacity &
 nautilus &
 gnome-terminal &
 ```
-
-
 # SSH setup
 Tunnel from 5901 (standard tightvncserver port) to localhost:5901
+
+# Alternative setup (MATE)
+Start with Ubuntu 16.10 server from Azure
+
+```
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install xrdp -y
+sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon -y
+sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /etc/xrdp/startwm.sh
+sudo apt-get install tightvncserver -y
+tightvncserver
+```
+Then enter the vnc password, kill the server & start with correct resolution:
+```
+tightvncserver -kill :1
+tightvncserver -geometry 1920x1200
+```
+
+DONE!
 
 # Install TightVNC
 From tightvnc.com [http://www.tightvnc.com/]
 
 Connect to ```localhost:5901```
-
-# Make everything look better
-Gnome shell [https://www.maketecheasier.com/8-gnome-shell-themes/]
-Terminal [https://github.com/denysdovhan/one-gnome-terminal]
